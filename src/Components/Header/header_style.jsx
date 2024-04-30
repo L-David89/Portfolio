@@ -24,10 +24,11 @@ export const HeaderContainer = styled.header`
 export const Logo = styled.img`
   width: 6vw;
   margin-bottom: 1rem;
+  margin-left: 2%;
   
 
   @media screen and (max-width: 768px) {
-      margin-right: 2%;
+      margin-right: 8%;
       width: 6vw; 
     }
   
@@ -42,21 +43,20 @@ export const Navigation = styled.nav`
   ul {
     list-style: none;
     padding: 0;
-    margin-left: 12%;
+    margin-left: 8%;
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    width: 50vw;
-    justify-content: space-around;
+    width: 80vw;
+    justify-content: space-evenly;
 
-    ${props =>
-      props.isMobile &&
-      css`
-        align-items: center; 
-        margin-left: 10%; 
-        margin-right: 0; 
-        width: auto; 
-      `}
+    @media screen and (max-width: 768px) {
+    justify-content: space-around;
+    margin-right: 8%
+     
+    }
+
+    
   }
 
   .nav-link {
@@ -82,14 +82,17 @@ export const Navigation = styled.nav`
 export const ExternalLinks = styled.div`
   display: flex;
   flex-direction: row;
+  margin-right: 2%;
   gap: 1rem;
 
   img {
     height: 4vw; 
+   
   }
 
   @media screen and (max-width: 768px) {
     justify-content: center; 
     align-items: center;
+    margin-right: 4%;
   }
 `;
