@@ -1,19 +1,19 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const slideIn = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 `;
 
 export const MainContainer = styled.main`
   display: flex;
-  min-height: 100vh;
+  min-height: auto;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -21,52 +21,18 @@ export const MainContainer = styled.main`
 `;
 
 export const Section = styled.section`
-  font-size: 2em; 
-  color: white;
-  text-align: center;
-  margin-top: 8vh;
-  margin-bottom: 16vh;
-  padding: 5vh 1vw; 
-`;
+  width: 100%;
+  h1 {
+    margin-top: 10vh;
+    margin-bottom: 10vh; 
+    text-align: center;
+    font-size: 3.8em;
 
-export const SecondSection = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh; 
-  width: 100%; 
-`;
-
-export const ImageContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90%; 
-  max-width: 100%;
-`;
-
-export const Card = styled.div`
-  text-align: center;
-  width: 15vw;
-  height: 20vh;
-  margin: 0 1vw; 
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const CardImage = styled.img`
-  width: auto;
-  height: 50%;
-  max-width: 100%;
-`;
-
-export const CardCaption = styled.p`
-  font-weight: bold; 
-  color: white; 
-  margin-top: 0.5rem; 
+    @media screen and (max-width: 768px) {
+      font-size: 2em; 
+      margin-top: 40vh;
+    }
+  }
 `;
 
 export const TextChunk = styled.span`
@@ -77,4 +43,78 @@ export const TextChunk = styled.span`
   display: block;
   font-weight: bold; 
   color: white; 
+`;
+
+export const SecondSection = styled.section`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0; 
+  height: 40vh;
+
+  .top-section {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    width: 100%;
+  }
+`;
+
+export const CodeContainer = styled.div`
+   width: 40%;
+  @media screen and (max-width: 768px) {
+    width: 80%; 
+  }
+`;
+
+export const CodeLogo = styled.img`
+  width: 12vw; 
+  height: auto;
+  margin-left: 34%;
+  
+
+  @media screen and (max-width: 768px) {
+    width: 30vw;
+    margin-left: 30%;
+  }
+`;
+
+export const ImageContainer = styled.figure`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto; 
+`;
+
+export const ClickableImage = styled.img`
+  cursor: pointer;
+  width: 3.0rem;
+  height: auto;
+  margin: 1rem; 
+  
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0%;
+    width: 1.9rem;
+    
+  }
+`;
+
+export const ImageCaption = styled.figcaption`
+  text-align: center;
+  font-size: 2rem; 
+  color: white;
+ 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.5rem; 
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem; 
+  }
 `;

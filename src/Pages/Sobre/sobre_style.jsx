@@ -13,53 +13,70 @@ const fadeInOut = keyframes`
 `;
 
 export const Main = styled.main`
-  padding: 20px;
+  padding: 5vw;
 `;
 
 export const SobreContainer = styled.div`
-  margin-top: 6%;
+  margin-top: 6vh; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 5vw; 
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const TextContainer = styled.div`
-  flex: 1;
-  font-size: 1em;
-  width: 100%;
+  font-size: 2vw; 
+  width: 70%; 
   margin: 0 auto;
   color: white;
   text-align: center;
-  height: 50vh;
   margin-bottom: 5vh;
-  padding: 1vw;
+  padding: 2vw; 
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  max-height: 40vh; 
+  overflow-y: auto; 
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20vh;
+    border: 2px solid white;
+    border-radius: 2vw; 
+    padding: 4vw; 
+    font-size: 0.7rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
-  flex: 1;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh; 
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10vh; 
+  }
 `;
 
 export const StyledImage = styled.img`
-  max-width: 80%; 
+  max-width: 80%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 2vw; 
   background-color: blue;
-  padding: 5px;
+  padding: 1vw; 
   animation: ${fadeInOut} 4s linear infinite;
 `;
 
 export const Frame = styled.div`
   position: relative;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
+  width: 100%; 
+  height: calc(100% + 10vh); 
   border: 2px solid white;
-  border-radius: 12px;
+  border-radius: 2vw; 
   pointer-events: none;
-  margin-top: 20px; 
+  margin-top: 5vh; 
 `;

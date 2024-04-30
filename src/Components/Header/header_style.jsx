@@ -1,71 +1,95 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const HeaderContainer = styled.header`
+  background-color: #161515;
+  height: 30vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
 
   @media screen and (max-width: 768px) {
+    height: ${props => (props.isExpanded ? '50vh' : '30vh')};
+    width: 100%;
+    transition: height 0.3s ease;
     flex-direction: column;
-    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    z-index: 9999;
   }
 `;
 
 export const Logo = styled.img`
-  width: 100px;
+  width: 6vw;
+  margin-bottom: 1rem;
+  
 
   @media screen and (max-width: 768px) {
-    align-self: flex-start; 
-    width: 50px; 
-    margin-bottom: 1rem; 
-  }
+      margin-right: 2%;
+      width: 6vw; 
+    }
+  
 `;
 
 export const Navigation = styled.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem; 
+
   ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
+    margin-left: 12%;
     display: flex;
-    align-items: center; 
-    margin-left: 10rem;
+    flex-direction: row;
+    gap: 1rem;
+    width: 50vw;
+    justify-content: space-around;
 
-    @media screen and (max-width: 768px) {
-      flex-direction: row; 
-    }
-  }
-
-  li {
-    margin-right: 2rem;
-
-    @media screen and (max-width: 768px) {
-      margin-right: 0; 
-      margin-bottom: 1rem; 
-    }
+    ${props =>
+      props.isMobile &&
+      css`
+        align-items: center; 
+        margin-left: 10%; 
+        margin-right: 0; 
+        width: auto; 
+      `}
   }
 
   .nav-link {
-    color: white;
     text-decoration: none;
+    font-weight: bold;
     font-size: 2.2rem;
-    margin-right: 4rem; 
+    transition: color 0.3s ease;
+    color: white;
+    
+
+    &:hover {
+      color:  #1a0b6ed4;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.6rem; 
+      margin-right: 50%;; 
+      color: white;
+    }
   }
 `;
 
 export const ExternalLinks = styled.div`
   display: flex;
-  align-items: center;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 1rem; 
-  }
+  flex-direction: row;
+  gap: 1rem;
 
   img {
-    width: 40px;
-    margin-left: 1rem;
-    cursor: pointer;
+    height: 4vw; 
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center; 
+    align-items: center;
   }
 `;
