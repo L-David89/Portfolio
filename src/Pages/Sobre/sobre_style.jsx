@@ -17,11 +17,11 @@ export const Main = styled.main`
 `;
 
 export const SobreContainer = styled.div`
-  margin-top: 12vh; 
+  margin-top: 12vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5vw; 
+  padding: 5vw;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -30,23 +30,23 @@ export const SobreContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  font-size: 2vw; 
-  width: 70%; 
+  font-size: 2vw;
+  width: 70%;
   margin: 0 auto;
   color: white;
   text-align: center;
   margin-bottom: 5vh;
-  padding: 2vw; 
+  padding: 2vw;
   display: flex;
   flex-direction: column;
-  max-height: 40vh; 
-  overflow-y: auto; 
+  max-height: 40vh;
+  overflow-y: auto;
 
   @media screen and (max-width: 768px) {
     margin-top: 20vh;
     border: 2px solid white;
-    border-radius: 2vw; 
-    padding: 4vw; 
+    border-radius: 2vw;
+    padding: 4vw;
     font-size: 0.7rem;
   }
 `;
@@ -55,28 +55,28 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5vh; 
+  margin-bottom: 5vh;
 
   @media screen and (max-width: 768px) {
-    margin-bottom: 10vh; 
+    margin-bottom: 10vh;
   }
 `;
 
 export const StyledImage = styled.img`
   max-width: 80%;
   height: auto;
-  border-radius: 2vw; 
+  border-radius: 2vw;
   background-color: blue;
-  padding: 1vw; 
+  padding: 1vw;
   animation: ${fadeInOut} 4s linear infinite;
 `;
 
 export const Frame = styled.div`
   position: relative;
-  width: 100%; 
-  height: calc(100% + 10vh); 
+  width: 100%;
+  height: calc(100% + 10vh);
   border: 2px solid white;
-  border-radius: 2vw; 
+  border-radius: 2vw;
   pointer-events: none;
-  margin-top: 5vh; 
+  margin-top: 5vh;
 `;

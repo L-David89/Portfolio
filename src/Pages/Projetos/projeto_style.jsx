@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const fadeInOut = keyframes`
   0%, 100% {
@@ -18,16 +18,14 @@ export const Main = styled.main`
   height: 100vh;
 
   @media screen and (max-width: 768px) {
-    padding: 5vw; 
+    padding: 5vw;
     margin-top: 2vh;
-    
   }
 `;
 
 export const Section = styled.section`
   width: 100%;
   @media screen and (max-width: 768px) {
-   
     margin-top: 70%;
   }
 `;
@@ -44,22 +42,21 @@ export const SlideContent = styled.div`
 `;
 
 export const SlideImage = styled.img`
- 
-  width: 20vw; 
+  width: 20vw;
   height: auto;
 
   @media screen and (max-width: 768px) {
-    max-width: 20vw; 
+    max-width: 20vw;
   }
 `;
 export const DetailLink = styled.a`
-text-decoration: none;
-color: black;
-transition: color 0.3s ease;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
 
-&:hover {
-  color: blue;
-}
+  &:hover {
+    color: blue;
+  }
 `;
 
 export const InstructionText = styled.p`

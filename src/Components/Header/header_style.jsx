@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   background-color: #161515;
@@ -8,19 +8,19 @@ export const HeaderContainer = styled.header`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  position: fixed; 
-  top: 0; 
+  position: fixed;
+  top: 0;
   z-index: 99999;
 
   @media screen and (max-width: 768px) {
-    height: ${props => (props.isExpanded ? '50vh' : '30vh')};
+    height: ${(props) => (props.isExpanded ? "50vh" : "30vh")};
     width: 100%;
     transition: height 0.3s ease;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed; 
-    top: 0; 
+    position: fixed;
+    top: 0;
     z-index: 9999;
   }
 `;
@@ -29,20 +29,18 @@ export const Logo = styled.img`
   width: 6vw;
   margin-bottom: 1rem;
   margin-left: 2%;
-  
 
   @media screen and (max-width: 768px) {
-      margin-right: 8%;
-      width: 6vw; 
-    }
-  
+    margin-right: 8%;
+    width: 6vw;
+  }
 `;
 
 export const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 
   ul {
     list-style: none;
@@ -55,12 +53,9 @@ export const Navigation = styled.nav`
     justify-content: space-evenly;
 
     @media screen and (max-width: 768px) {
-    justify-content: space-around;
-    margin-right: 8%
-     
+      justify-content: space-around;
+      margin-right: 8%;
     }
-
-    
   }
 
   .nav-link {
@@ -69,15 +64,14 @@ export const Navigation = styled.nav`
     font-size: 2.2rem;
     transition: color 0.3s ease;
     color: white;
-    
 
     &:hover {
-      color:  #1a0b6ed4;
+      color: #1a0b6ed4;
     }
 
     @media screen and (max-width: 768px) {
-      font-size: 0.6rem; 
-      margin-right: 50%;; 
+      font-size: 0.6rem;
+      margin-right: 50%;
       color: white;
     }
   }
@@ -90,12 +84,11 @@ export const ExternalLinks = styled.div`
   gap: 1rem;
 
   img {
-    height: 4vw; 
-   
+    height: 4vw;
   }
 
   @media screen and (max-width: 768px) {
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     margin-right: 4%;
   }
