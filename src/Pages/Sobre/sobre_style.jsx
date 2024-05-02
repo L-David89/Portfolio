@@ -17,7 +17,7 @@ export const Main = styled.main`
 `;
 
 export const SobreContainer = styled.div`
-  margin-top: 14vh; 
+  margin-top: 12vh; 
   display: flex;
   justify-content: space-around;
   align-items: center;
