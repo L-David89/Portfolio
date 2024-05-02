@@ -2,11 +2,15 @@ import styled, { css } from 'styled-components';
 
 export const HeaderContainer = styled.header`
   background-color: #161515;
+  width: 100%;
   height: 30vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed; 
+  top: 0; 
+  z-index: 99999;
 
   @media screen and (max-width: 768px) {
     height: ${props => (props.isExpanded ? '50vh' : '30vh')};

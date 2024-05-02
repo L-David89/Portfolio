@@ -13,11 +13,17 @@ const slideIn = keyframes`
 
 export const MainContainer = styled.main`
   display: flex;
+  margin-top: 22vh;
   min-height: auto;
   width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+      margin-top: 2vh;
+    }
+
 `;
 
 export const Section = styled.section`

@@ -11,6 +11,7 @@ const fadeInOut = keyframes`
 
 export const Main = styled.main`
   display: flex;
+  margin-top: 22vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -18,6 +19,7 @@ export const Main = styled.main`
 
   @media screen and (max-width: 768px) {
     padding: 5vw; 
+    margin-top: 2vh;
     
   }
 `;

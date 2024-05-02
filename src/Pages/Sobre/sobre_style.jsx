@@ -17,9 +17,9 @@ export const Main = styled.main`
 `;
 
 export const SobreContainer = styled.div`
-  margin-top: 6vh; 
+  margin-top: 14vh; 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 5vw; 
 
